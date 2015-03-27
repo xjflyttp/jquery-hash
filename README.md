@@ -16,6 +16,7 @@ Javascript
 ```js
 $.hash.get('abc');
 $.hash.set('abc', 'value');
+$.hash.remove('abc');
 $.hash.getParamsObject();
 $.hash.getParamsString();
 ```

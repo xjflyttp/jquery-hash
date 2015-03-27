@@ -1,8 +1,9 @@
 /**
  * @author xjflyttp <xjflyttp@gmail.com>
  * @example
- * $.hash.get('abc');
- * $.hash.set('abc', 'value');
+ * $.hash.get('abc'); //get value
+ * $.hash.set('abc', 'value'); //set value
+ * $.hash.remove('abc'); //remove value
  * $.hash.getParamsObject();
  * $.hash.getParamsString();
  */
@@ -64,6 +65,13 @@
         },
         set: function (name, value) {
             params[name] = value;
+            setHashToLocation();
+            return this;
+        },
+        remove: function (name) {
+            if (params[name] !== undefined) {
+                delete params[name];
+            }
             setHashToLocation();
             return this;
         },
