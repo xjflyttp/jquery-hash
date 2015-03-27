@@ -1,0 +1,6 @@
+{
+    "name": "jquery-hash",
+    "version": "1.0.0",
+    "main": ["jquery.hash.js"],
+    "ignore": []
+}
