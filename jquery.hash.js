@@ -17,10 +17,9 @@
 
     function setHashToLocation() {
         var hashString = getHashFromParams();
-        if (hashString.length === 0) {
-            return;
+        if (hashString.length > 0) {
+            hashString = '#' + hashString;
         }
-        hashString = '#' + hashString;
         window.location.hash = hashString;
     }
 
@@ -71,8 +70,8 @@
         remove: function (name) {
             if (params[name] !== undefined) {
                 delete params[name];
+                setHashToLocation();
             }
-            setHashToLocation();
             return this;
         },
         /**
